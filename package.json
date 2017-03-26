@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env=dev --progress --profile --colors",
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:prod": "webpack --env=prod --progress --profile --colors"
+    "build:dev": "webpack --env=dev --progress --profile --colors --watch",
+    "build:prod": "webpack --env=prod --progress --profile --colors",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0"
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "flow-bin": "^0.42.0"
   }
 }

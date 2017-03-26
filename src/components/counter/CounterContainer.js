@@ -1,3 +1,5 @@
+// @flow
+
 import { connect } from 'react-redux'
 import { Counter } from './CounterPresentational'
 import * as actions from './CounterActions'

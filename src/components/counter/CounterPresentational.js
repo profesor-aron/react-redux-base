@@ -1,9 +1,17 @@
+// @flow
+
 import React from 'react'
 
-export const Counter = ({ num, increase, decrease }) => (
+type CounterModelType = {
+  num: number,
+  increase: Function,
+  decrease: Function
+}
+
+export const Counter = (counterModel: CounterModelType) => (
   <div>
-    { num }
-    <button onClick={() => increase(1)}>Increase</button>
-    <button onClick={() => decrease(1)}>Decrease</button>
+    { counterModel.num }
+    <button onClick={() => counterModel.increase(1)}>Increase</button>
+    <button onClick={() => counterModel.decrease(1)}>Decrease</button>
   </div>
 )
