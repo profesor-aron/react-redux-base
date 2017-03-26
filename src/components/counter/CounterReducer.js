@@ -1,3 +1,5 @@
+// @flow
+
 import { COUNTER_TYPES } from './CounterTypes'
 
 const initialState = {
