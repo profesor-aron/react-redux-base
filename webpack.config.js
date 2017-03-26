@@ -1,3 +1,4 @@
+/*
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -27,3 +28,9 @@ module.exports = {
   },
   plugins: [HtmlWebpackPluginConfig]
 }
+*/
+function buildConfig(env) {
+  return require('./config.' + env + '.js')(env)
+}
+
+module.exports = buildConfig
