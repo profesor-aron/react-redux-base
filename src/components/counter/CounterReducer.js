@@ -6,7 +6,16 @@ const initialState = {
   num: 0
 }
 
-export const counter = (state = initialState, action) => {
+type CounterType = {
+  num: number  
+}
+
+type CounterActionType = {
+  type: string,
+  value: number 
+}
+
+export const counter = (state: CounterType = initialState, action: CounterActionType) => {
   switch (action.type) {
     case COUNTER_TYPES.INCREASE:
       return {
